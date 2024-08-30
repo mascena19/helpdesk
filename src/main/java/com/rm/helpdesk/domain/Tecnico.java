@@ -3,18 +3,30 @@ package com.rm.helpdesk.domain;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.persistence.Entity;
+
+import com.rm.helpdesk.domain.enums.Perfil;
+
+import jakarta.persistence.OneToMany;
+
+@Entity
 public class Tecnico extends Pessoa {
 	
+	
+	@OneToMany(mappedBy = "tecnico")
+	private static final long serialVersionUID = 1L;
 	private List<Chamado> chamados = new ArrayList<>();
 
 	public Tecnico() {
 		super();
-		// TODO Auto-generated constructor stub
+		addPerfil(Perfil.TECNICO);
+		
 	}
 
 	public Tecnico(Integer id, String nome, String cpf, String email, String senha) {
 		super(id, nome, cpf, email, senha);
-		// TODO Auto-generated constructor stub
+		addPerfil(Perfil.TECNICO);
+		
 	}
 
 	public List<Chamado> getChamados() {
