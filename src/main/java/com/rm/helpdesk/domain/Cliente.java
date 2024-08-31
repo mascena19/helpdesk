@@ -5,11 +5,9 @@ import java.util.List;
 
 import javax.persistence.Entity;
 
-import org.hibernate.annotations.ManyToAny;
-
 import com.rm.helpdesk.domain.enums.Perfil;
 
-import jakarta.persistence.OneToMany;
+import javax.persistence.OneToMany;
 
 @Entity
 public class Cliente extends Pessoa {

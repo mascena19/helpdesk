@@ -13,12 +13,13 @@ import javax.persistence.Entity;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.rm.helpdesk.domain.enums.Perfil;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.ElementCollection;
-import jakarta.persistence.FetchType;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import javax.persistence.Column;
+import javax.persistence.ElementCollection;
+
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 
 @Entity
@@ -50,7 +51,7 @@ public abstract class Pessoa implements Serializable {
 	public Pessoa() {
 		super();
 		addPerfil(Perfil.CLIENTE);
-		// TODO Auto-generated constructor stub
+		
 	}
 
 

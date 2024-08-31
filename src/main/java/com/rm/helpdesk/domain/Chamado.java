@@ -5,18 +5,15 @@ import java.time.LocalDate;
 import java.util.Objects;
 
 import javax.persistence.Entity;
-
-import org.hibernate.annotations.ManyToAny;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.rm.helpdesk.domain.enums.Prioridade;
 import com.rm.helpdesk.domain.enums.Status;
-
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-
 
 
 @Entity
@@ -39,18 +36,18 @@ public class Chamado implements Serializable{
 	private String titulo;
 	private String observacoes;
 	
-	@ManyToAny
+	@ManyToOne
 	@JoinColumn( name = "tecnico_id")
 	private Tecnico tecnico;
 	
-	@ManyToAny
+	@ManyToOne
 	@JoinColumn( name = "cliente_id")
 	private Cliente cliente;
 	
 	
 	public Chamado() {
 		super();
-		// TODO Auto-generated constructor stub
+		
 	}
 
 

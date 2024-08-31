@@ -4,17 +4,20 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.Entity;
+import javax.persistence.OneToMany;
 
 import com.rm.helpdesk.domain.enums.Perfil;
 
-import jakarta.persistence.OneToMany;
 
 @Entity
 public class Tecnico extends Pessoa {
 	
+
 	
-	@OneToMany(mappedBy = "tecnico")
 	private static final long serialVersionUID = 1L;
+	
+
+	@OneToMany(mappedBy = "tecnico")
 	private List<Chamado> chamados = new ArrayList<>();
 
 	public Tecnico() {
@@ -37,5 +40,4 @@ public class Tecnico extends Pessoa {
 		this.chamados = chamados;
 	}
 	
-
 }
