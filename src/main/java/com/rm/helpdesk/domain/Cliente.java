@@ -40,6 +40,4 @@ public class Cliente extends Pessoa {
 		this.chamados = chamados;
 	}
 	
-	
-
 }
