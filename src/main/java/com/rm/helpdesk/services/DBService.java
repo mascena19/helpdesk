@@ -33,6 +33,9 @@ public class DBService {
 		
 		Tecnico tec2 = new Tecnico(null, "Paulo Mascena", "721.485.900-90", "mascena198@gmail.com", "123456");
 		tec2.addPerfil(Perfil.ADMIN);
+		
+		Tecnico tec3 = new Tecnico(null, "Paulo Ricardo", "873.093.930-58", "mascena1985@gmail.com", "123456");
+		tec3.addPerfil(Perfil.ADMIN);
 	
 		Cliente cli1 = new Cliente(null, "Elisa Smith", "870.204.830-20", "raquel@gmail.com", "123654");
 		Cliente cli2 = new Cliente(null, "Elisa Smith", "978.287.370-50", "raquel2@gmail.com", "123654");
@@ -47,5 +50,7 @@ public class DBService {
 		tecnicoRepository.saveAll(Arrays.asList(tec2));
 		clienteRepository.saveAll(Arrays.asList(cli2));
 		chamadoRepository.saveAll(Arrays.asList(c2));
+		
+		tecnicoRepository.saveAll(Arrays.asList(tec3));
 	}
 }
