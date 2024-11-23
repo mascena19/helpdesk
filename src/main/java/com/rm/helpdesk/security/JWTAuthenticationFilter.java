@@ -66,7 +66,7 @@ public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilte
 			AuthenticationException failed) throws IOException, ServletException {
 		
 		response.setStatus(401);
-		response.setContentType("application/jsaon");
+		response.setContentType("application/json");
 		
 		response.getWriter().append(json());
 		
